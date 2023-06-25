@@ -10,7 +10,7 @@ cdrom
 # Run the Setup Agent on first boot
 firstboot --disabled
 skipx
-ignoredisk --only-use=vda
+ignoredisk --only-use=sda
 eula --agreed
 # Reboot after install
 reboot --eject
@@ -23,14 +23,14 @@ lang en_US.UTF-8
 # Network information
 network  --bootproto=dhcp --device=eth0 --ipv6=auto --activate --hostname=localhost.localdomain --onboot=yes
 # Root password
-rootpw --lock 
-user --groups=wheel --name=admin --password=changeme --gecos="Administrator"
+rootpw Netvine123
+user --groups=wheel --name=admin --password=123456 --gecos="Administrator"
 # System timezone
-timezone Europe/Berlin --isUtc
+timezone Asia/Shanghai --isUtc
 # System bootloader configuration
-bootloader --location=mbr --boot-drive=vda
+bootloader --location=mbr --boot-drive=sda
 # Partition clearing information
-clearpart --all --initlabel --drives=vda
+clearpart --all --initlabel --drives=sda
 autopart --type=lvm
 reboot --eject
 

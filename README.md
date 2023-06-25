@@ -47,3 +47,5 @@ Once the installer has finished and rebooted into the system, login as admin, th
  * [Red Hat Documentation on Kickstart](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-kickstart-syntax.html)
  * ["Testing Red Hat Enterprise Linux 7 and CentOS 7 (preview)"](https://sig-io.nl/?p=372): Useful blogpost with examples
  * [Building a custom CentOS 7 kickstart disc](http://smorgasbork.com/component/content/article/35-linux/153-building-a-custom-centos-7-kickstart-disc-part-3): was used to create the script
+
+ks syntax example is https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/7/html/installation_guide/sect-kickstart-syntax#doc-wrapper

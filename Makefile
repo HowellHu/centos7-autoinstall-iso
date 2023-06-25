@@ -1,7 +1,7 @@
 SHELL=/bin/bash
 VARIANT ?= custom
 BUILD_DIR ?= ./build
-INPUTISO ?= CentOS-7.0-1406-x86_64-DVD.iso
+INPUTISO ?= CentOS_origin.iso
 INPUTISO_URL ?= http://ftp.tu-chemnitz.de/pub/linux/centos/7.0.1406/isos/x86_64/$(INPUTISO)
 OUTPUTISO ?= CentOS7-$(VARIANT)-x86_64-DVD.iso
 COMMIT ?= $(shell git log --pretty=format:'%h' -n 1)
@@ -23,7 +23,7 @@ prerequisites:
 	which genisoimage || yum install -y genisoimage
 
 inputiso:
-	[ -f $(INPUTISO) ] || wget -c -O $(INPUTISO) $(INPUTISO_URL)
+	[ -f $(INPUTISO) ] || echo "INPUT ISO does NOT exist!" || exit $$?
 
 generate-output-iso:
 	@echo Preparing build environment.
