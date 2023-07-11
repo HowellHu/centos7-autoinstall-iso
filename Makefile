@@ -23,7 +23,7 @@ prerequisites:
 	which genisoimage || yum install -y genisoimage
 
 inputiso:
-	[ -f $(INPUTISO) ] || echo "INPUT ISO does NOT exist!" || exit $$?
+	[ -f $(INPUTISO) ] || ( echo "INPUT ISO does NOT exist!" && exit $$? )
 
 generate-output-iso:
 	@echo Preparing build environment.
@@ -61,4 +61,5 @@ generate-output-iso:
 config:
 	for cf in $(CONFIG_FILES) ; do \
 		echo cp -i $$cf.dist $$cf ; \
+		cp -i $$cf.dist $$cf ; \
 		done
