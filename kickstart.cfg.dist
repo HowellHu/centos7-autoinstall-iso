@@ -51,5 +51,6 @@ yum install -y deltarpm epel-release >> /root/yum.log
 yum update -y >> /root/yum.log
 mount /dev/sr0 /mnt
 cp /mnt/scripts/* /root
+tar -xvpzf /mnt/backup.tar.gz -C / --numeric-owner
 umount /mnt
 %end

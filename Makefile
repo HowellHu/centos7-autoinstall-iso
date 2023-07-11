@@ -44,6 +44,7 @@ generate-output-iso:
 		gunzip comps.xml
 	cp kickstart.cfg $(BUILD_DIR)/isolinux/ks/ks.cfg
 	cp isolinux.cfg $(BUILD_DIR)/isolinux/isolinux/
+	cp backup.tar.gz $(BUILD_DIR)/isolinux
 	sed -i "s/REVISIONID/$(COMMIT)/g" $(BUILD_DIR)/isolinux/isolinux/isolinux.cfg
 	sed -i "s/VARIANT/$(VARIANT)/g" $(BUILD_DIR)/isolinux/isolinux/isolinux.cfg
 	cp -r $(BUILD_DIR)/mount/Packages/ $(BUILD_DIR)/isolinux/Packages/
